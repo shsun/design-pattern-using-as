@@ -5,6 +5,7 @@ package com.composite {
 	public class Composite implements IComponent {
 		private var _childen : Vector.<IComponent> = new Vector.<IComponent>();
 		protected var name : String;
+		private var parent : IComponent;
 
 		public function Composite(name : String = null) {
 			this.name = name;
@@ -14,6 +15,7 @@ package com.composite {
 			if (this.find(obj) < 0) {
 				this._childen.push(obj);
 			}
+			obj.setParent(this);
 			return obj;
 		}
 
@@ -22,6 +24,14 @@ package com.composite {
 			if (i >= 0) {
 				this._childen.splice(i, 1);
 			}
+		}
+
+		public function setParent(parent : IComponent) : void {
+			this.parent = parent;
+		}
+
+		public function getParent() : IComponent {
+			return this.parent;
 		}
 
 		public function display(depth : int) : void {

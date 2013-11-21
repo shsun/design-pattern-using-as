@@ -9,9 +9,13 @@ package com.composite {
 			
 			var componentA : IComponent = component.add(new Composite("BranchA"));
 			componentA.add(new Leaf("LeafA"));
-			componentA.add(new Leaf("LeafB"));
+			var componentAB:IComponent = componentA.add(new Composite("BranchAA"));
+			componentAB.add(new Leaf("LeafA"))
 			
 			var componentB : IComponent = component.add(new Composite("BranchB"));
+			componentB.add(new Leaf("LeafA"));
+			
+			var componentC : IComponent = component.add(new Composite("BranchC"));
 			
 			component.display(1);
 		}

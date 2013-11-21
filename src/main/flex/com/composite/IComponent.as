@@ -7,6 +7,10 @@ package com.composite {
 
 		function remove(obj : IComponent) : void;
 
+		function getParent() : IComponent;
+
+		function setParent(parent : IComponent) : void;
+
 		function display(depth : int) : void;
 	}
 }
