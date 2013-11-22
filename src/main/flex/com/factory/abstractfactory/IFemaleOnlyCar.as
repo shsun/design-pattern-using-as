@@ -2,7 +2,7 @@ package com.factory.abstractfactory {
 	/**
 	 * @author shsun
 	 */
-	public interface IBusinessCar {
+	public interface IFemaleOnlyCar {
 		function drive():void;
 	}
 }

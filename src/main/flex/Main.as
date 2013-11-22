@@ -1,4 +1,5 @@
 ﻿package {
+	import com.factory.abstractfactory.AbstractFactory_Magnate;
 	import com.factory.factorymethod.FactoryMeehod_Magnate;
 	import com.factory.simplefactory.SimpleFactory_Magnate;
 	import com.composite.CompositeDemo;
@@ -12,7 +13,10 @@
 			//CompositeDemo.usage();
 			
 			//SimpleFactory_Magnate.usage();
-			FactoryMeehod_Magnate.usage();
+			//FactoryMeehod_Magnate.usage();
+			
+			AbstractFactory_Magnate.usage();
+			
 		}
 	}
 }
