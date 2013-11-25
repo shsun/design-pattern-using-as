@@ -1,4 +1,7 @@
 ﻿package {
+	import com.visitor.acyclicvisitor.CyclicVisitor_Demo;
+	import com.visitor.purevisitor.PureVisitor_Demo;
+	import com.decorator.Decorator_Demo;
 	import com.factory.abstractfactory.AbstractFactory_Magnate;
 	import com.factory.factorymethod.FactoryMeehod_Magnate;
 	import com.factory.simplefactory.SimpleFactory_Magnate;
@@ -15,8 +18,11 @@
 			//SimpleFactory_Magnate.usage();
 			//FactoryMeehod_Magnate.usage();
 			
-			AbstractFactory_Magnate.usage();
+			//AbstractFactory_Magnate.usage();
+			//Decorator_Demo.usage();	
 			
+			//PureVisitor_Demo.usage();
+			CyclicVisitor_Demo.usage();
 		}
 	}
 }
