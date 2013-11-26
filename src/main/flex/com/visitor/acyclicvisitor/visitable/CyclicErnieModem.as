@@ -21,7 +21,11 @@ package com.visitor.acyclicvisitor.visitable {
 		}
 
 		public function accept(visitor : ICyclicModemVisitor) : void {
-			ICyclicErnieModemVisitor(visitor).visitErnieModem(this);
+			try {
+				ICyclicErnieModemVisitor(visitor).visitErnieModem(this);
+			} catch(error : Error) {
+				trace(error.getStackTrace());
+			}
 		}
 	}
 }

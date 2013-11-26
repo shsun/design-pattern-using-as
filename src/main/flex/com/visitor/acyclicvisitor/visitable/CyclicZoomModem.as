@@ -21,7 +21,11 @@ package com.visitor.acyclicvisitor.visitable {
 		}
 
 		public function accept(visitor : ICyclicModemVisitor) : void {
-			ICyclicZoomModemVisitor(visitor).visitZoomModem(this);
+			try {
+				ICyclicZoomModemVisitor(visitor).visitZoomModem(this);
+			} catch(error : Error) {
+				trace(error.getStackTrace());
+			}
 		}
 	}
 }

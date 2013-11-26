@@ -9,21 +9,16 @@ package com.visitor.acyclicvisitor {
 	/**
 	 * @author shsun
 	 */
-	public class CyclicWinModemConfigurator implements ICyclicModemVisitor,ICyclicErnieModemVisitor,ICyclicHayesModemVisitor,ICyclicZoomModemVisitor
+	public class CyclicWinModemConfigurator implements ICyclicModemVisitor,ICyclicErnieModemVisitor,ICyclicHayesModemVisitor {
 		
-		public function visitErnieModem(modem : CyclicErnieModem) : void {
+		public function visitErnieModem(modem:CyclicErnieModem):void {
 			modem.configurationPattern = new RegExp(".+_win");
 			trace("win --- "+modem.configurationPattern.source);
 		}
 
-		public function visitHayesModem(modem : CyclicHayesModem) : void {
+		public function visitHayesModem(modem:CyclicHayesModem):void {
 			modem.configurationString = "i am hayesmodem, win";
 			trace("win --- "+modem.configurationString);
-		}
-
-		public function visitZoomModem(modem : CyclicZoomModem) : void {
-			modem.configurationValue = 200;
-			trace("win --- "+modem.configurationValue);
 		}
 	}
 }
