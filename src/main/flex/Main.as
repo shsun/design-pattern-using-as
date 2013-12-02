@@ -1,4 +1,5 @@
 ﻿package {
+	import com.state.FSM_Demo;
 	import com.command.activeobject.ActiveObjectEngine_Demo;
 	import com.command.translation.MacroCommand_Demo;
 	import com.command.simplecommand.SimpleCommand_Demo;
@@ -30,7 +31,8 @@
 			//SimpleCommand_Demo.usage();
 			//MacroCommand_Demo.usage();
 			
-			ActiveObjectEngine_Demo.usage();
+			//ActiveObjectEngine_Demo.usage();
+			FSM_Demo.usage();
 		}
 	}
 }

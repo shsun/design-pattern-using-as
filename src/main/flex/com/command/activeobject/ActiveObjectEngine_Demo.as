@@ -8,7 +8,7 @@ package com.command.activeobject {
 
 			var wakeupcommand : WakeupCommand = new WakeupCommand();
 
-			engine.addSubCommand(new SleepCommand(2, engine, wakeupcommand));		
+			engine.addSubCommand(new SleepCommand(5, engine, wakeupcommand));		
 			engine.execute();
 		}
 	}
